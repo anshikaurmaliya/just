@@ -1,0 +1,1579 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dela+Gothic+One&display=swap');
+
+
+@font-face {
+    font-family:Neumatic ;
+    src: url(./NeumaticGothic-Bold.ttf);
+}
+@font-face {
+  font-family:Canopee ;
+  src: url(./Canopee\ Regular.ttf);
+}
+@font-face{
+  font-family: 'Tektur';
+  src: url('./Tektur-Variable.ttf');
+}
+@font-face {
+  font-family: 'Vt';
+  src: url(./VT323-Regular.ttf);
+}
+@font-face{
+  font-family: 'heading';
+  src: url('./HeadingNowTrial-06Bold.ttf');
+}
+
+
+*{
+    font-family: "Barlow","Dela Gothic One" sans-serif;
+}
+body ,html{
+  overscroll-behavior:  none;
+}
+.menu-items h1{
+  transition: all ease 0.5s;
+}
+.menu-items:hover h1{
+  transform: scaleY(0.76rem);
+  letter-spacing: 0.040rem;
+  opacity: 0.8;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+.texts  h1{
+    transition: all ease 0.5s;
+}
+
+#menu-items img {
+  height: 100% !important;
+  width: 100% !important;
+  transform: scale(0);
+  transition: all cubic-bezier(0,.91,1,.32) 0.3s;
+}
+
+.scale-up {
+  transform: scale(1);
+}
+
+
+.blocks{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    width: 400px;
+    height: 500px;
+    margin: 0 1rem;
+    background-color: #2e2918;
+    overflow: clip;
+}
+
+.product .img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.magecontinaer{
+    perspective: 1000px;
+
+}
+.maincard , .incomingcard{
+    background-position: center;
+    background-size: cover;
+    background-repeat:  no-repeat;
+    perspective: 1000px;
+}
+.imgleft img, .imgright img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.detailsContiner{
+    background: linear-gradient(to bottom, transparent, rgba(14, 13, 13, 0.485));
+}
+.container {
+    perspective: 1000px;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.imgright, .imgleft {
+    transition: transform 0.1s ease-out;
+}
+.scrolling::-webkit-scrollbar{
+    display: none;
+}
+.scrolllogo   {
+    animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* menubar///// */
+.box{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  background: #fff;
+  height: 20vh;
+  width:20vh;
+  border-radius: 50%;
+} 
+ .box .eye
+{
+  position: relative;
+  width: 2.5vw;
+  height: 5vh;
+  position: block;
+  background: #fff;
+  margin-top: 3vw;
+  border: 2px solid black;
+  border-radius: 50%;
+
+
+}
+.mouth{
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 30px;
+  width: 25px;
+  border-radius: 50px ;
+  background: #000;
+  animation: wonderface 2s infinite cubic-bezier(0.075,0.82,0.165,1);
+}
+@keyframes wonderface {
+  0%{
+      height: 30px;
+  }
+  50%{
+      height: 40px;
+  }
+  100%{
+      height: 30px;
+  }
+  
+}
+.box .eye::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50% ,-50%);
+  background: black;
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  border: 5px solid #2196f3;
+  box-sizing: border-box;
+} 
+
+/* 
+@media (max-width: 600px)  {
+  .navbar{
+      background: lightblue;
+  }
+  #SVG{
+      width: 7vw;
+      height: 7vw;
+  }
+  .menu{
+      font-size: 4vw;
+  }
+ 
+  .menubar #menubarlogo .eye {
+     font-size: 4vw;   
+  }
+  .menubarcontant{
+      flex-direction: column;
+  }
+  .menubarcontant .leftsection{
+      width: 100%;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+
+  }
+  .menubarcontant .rightsection{
+      width: 100%;
+      height: 50vh;
+  }
+
+
+} */
+
+
+/* menubar///// */
+
+
+.productContainer{
+    width: 100%;
+    min-height: 100vh;
+    margin-left: auto;
+    position: relative;
+    
+}
+.slider{
+    width: 100%;
+    height: 100%;
+}
+.slider .swiper-slide{
+  width: 100%;
+  height: 100vh;
+  position: relative;   
+}
+.bg-light, .bg-dark{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    z-index: -1;
+}
+.bg-light{
+    left: 0;
+    background-color: #fff;
+}
+.bg-dark{
+    right: 0;
+    background-color: #fff;
+}
+
+.slider .shoeimg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -70%);
+    z-index: 999;
+}
+.slider .shoeimg img{
+   height: 550px;
+   width: 550px;
+   object-fit: contain;
+}
+.shoeimg img {
+    position: relative;
+   animation: float infinite 2s linear;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+.slider .heading-light{
+    font-size: 150px;
+    font-family:"Dela Gothic One" , sans-serif ;
+    text-align: center;
+    margin-top:50px ;
+    color:#333;
+    font-weight: bolder;
+    text-shadow: -5px 5px 10px rgba(15, 9, 9, 0.675);
+}
+
+.slider .heading-dark{
+    font-size: 130px;
+    text-align: center;
+    margin-top: 50px;
+    color: #333;
+    font-weight: 999;
+    text-shadow: -5px 5px 10px rgba(0, 0, 0, 0.729);
+}
+.slider .wave{
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+
+}
+
+.slider .wave img{
+    height: 100px;
+    width: 900px;
+}
+
+.slider .title{
+    text-align: center;
+    font-size: 24px;
+    color: #222;
+    text-transform: uppercase;
+    text-shadow: -5px 5px 10px rgba(15, 9, 9, 0.675);
+
+}
+.slider .price{
+    text-align: center;
+    font-size: 50px;
+    font-family: "Dela Gothic One", sans-serif;
+    color: #222;
+    text-shadow: -5px 5px 10px rgba(15, 9, 9, 0.675);
+
+}
+
+.slider button{
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-inline: auto;
+  padding: 12px 50px;
+  font-family: "Dela Gothic One", sans-serif;
+  background-color: white;
+  outline: none;
+  font-size: 17px;
+  border: 2px solid#b2c2cc;
+  cursor: pointer;
+  color: #000;
+  border-radius: 5px;
+}
+.specs{
+    position: absolute;
+    bottom: 10px;
+    left: 20%;
+    padding: 20px 50px;
+    width: 250px !important;
+    height: 350px !important;
+    background-color: #444;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    gap:20px;
+    z-index:-1;
+    padding-left:50px;
+    color: #fff;
+
+}
+.spec p{
+    font-weight: 500;
+    font-size: 24px;
+    text-shadow: -1px 1px 3px rgba(0,0,0,0.3);
+}
+.spec span{
+    font-size: 14px;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+   
+.spec::before{
+    content: "SPECS";
+    position: absolute;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    top: -20px;
+    left: 10px;
+    font-family: "Dela Gothic One", sans-serif;
+    color: white;
+    text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.929);
+}
+.thumb1{
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 12%;
+    height: 100%;
+    z-index: 100;
+    box-shadow: 10px 0px 20px rgb(132, 128, 128);
+
+}
+
+.thumb1  .swiper-slide{
+    height: 100%;
+    width: 100%;
+    display:grid;
+    background: #333;
+    place-content: center;
+    
+}
+
+.thumb1 .img img{
+   height: 100%;
+   width: 100%;
+   object-fit: contain;
+}
+
+.thumb1 .swiper-slide-active{
+    background: linear-gradient(45deg, rgba(0,0,0,0.2) ,transparent);
+}
+.thumb2 .swiper-slide-active{
+    display: none !important;
+}
+.thumb2 .swiper-slide-active:last-child{
+  display: grid!important;
+}
+.thumb2{
+    position: absolute;
+    bottom: 10px;
+    right:0;
+    height: 200px;
+    width: 35%;
+    background: linear-gradient(45deg, rgba(0,0,0,0.2) ,transparent);
+}
+.thumb2 .swiper-slide{
+    width:100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    position: relative;
+}
+
+.thumb2 .img img{
+    height: 400px;
+    width: 300px;
+    object-fit: contain;
+    margin-left: 200px;
+}
+.thumb2 .title{
+    position: absolute;
+    bottom:50px;
+    left: 10px;
+    
+    
+
+}
+
+.thumb2 .title span{
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #444;
+    text-align: center;
+    text-shadow: -1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.thumb2 .title p{
+    font-size: 25px;
+    font-weight: 500;
+    color: #111;
+    text-transform: uppercase;
+
+    font-family: "Dela Gothic", sans-serif;
+    text-shadow: -1px 1px 3px rgba(0,0,0,0.5);
+}
+.thumb2 .icon{
+    font-size: 30px;
+    position: absolute;
+    color: #444;
+    z-index: 10;
+    top: 10px;
+    right: -30px;
+}
+
+
+/*//////////  thirdpage  //////// */
+#main-video {
+  display: none;
+}
+
+#main-image {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.videosection::after{
+  content:"";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: rgb(223, 220, 220);
+  width: 100%;
+  height: 100%;
+  transition: all ease 0.5s;
+}
+.videosection:hover::after{
+  transform: translateY(100%);
+}
+
+
+
+/* lastpage ///////// */
+.card img{
+    position: absolute;
+    opacity: 0.75;
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+}
+
+  @keyframes fade-out-back {
+    from {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fade-in-front {
+    from {
+      top: 1rem;
+      transform: scale(1.2);
+      opacity: 0;
+    }
+  }
+  
+  .hide-cursor * {
+    cursor: none;
+  }
+  .memory-of-jordan{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10;
+  } 
+  #jordanimg1{
+   background-image: url("https://media.gettyimages.com/id/1980390500/photo/michael-jordan-shooting-guard-and-small-forward-for-the-chicago-bulls-prepares-to-make-a-free.jpg?s=612x612&w=0&k=20&c=OVIBIwaeQ0-AmRvj99VbU-pspbPDnq5A4JL75Mz9KZg=");
+  }
+  #jordanimg3{
+    background-image: url("https://media.gettyimages.com/id/2154292238/photo/michael-jordan-shooting-guard-and-small-forward-for-the-chicago-bulls-addresses-the-media.jpg?s=612x612&w=0&k=20&c=kXFQuf1sYi2Tz6ctOky4Pb5sDEvX5f_--wYMCuypzYY=");
+  }
+  #jordanimg2{
+    background-image: url("https://media.gettyimages.com/id/278097/photo/inglewood-ca-guard-michael-jordan-of-the-chicago-bulls-sits-nexts-to-his-wife-juanita-and-his-dad.jpg?s=612x612&w=0&k=20&c=zOfdQZenDShMvAtPVlB4_6wo17RQeZy_LNNdRyh-07I=");
+  }
+/* fotter  ////////*/
+
+.fotterelement .fotterlink{
+  font-size: 1.9vw;
+  color: #a7a2a2;
+  text-transform: capitalize;
+  font-family: "Barlow","Dela Gothic One" sans-serif;
+}
+.fotterelement .fotterlink{
+  font-size: 1.2vw;
+  color: #a7a2a2;
+  text-transform: uppercase;
+  position: relative;
+  font-family: "Barlow","Dela Gothic One" sans-serif;
+  overflow: hidden;
+  
+}
+.fotterelement .fotterlink .up{
+  transition: all ease 0.5S;
+
+}
+.fotterelement .fotterlink .down{
+  transition: all ease 0.5S;
+
+}
+.fotterelement .fotterlink:hover .up{
+  transform: translateY(-80%);
+}
+.fotterelement .fotterlink:hover .down{
+  transform: translateY(-80%);
+}
+.fotterelement .fotterlink::after{
+  content: '';
+  position: absolute;
+  top: 90%;
+  left: -100%;
+  height: 3%;
+  width: 100%;
+  background: white;  
+  transition: all ease 0.5s;
+  border: 1px solid white;
+}
+.fotterelement .fotterlink:hover::after{
+  width: 100%;
+  left: 100%;
+}
+.blinkline .line{
+  animation: blink 2s infinite  linear;
+}
+
+@keyframes blink{
+  0%  ,100% {
+    width: 0%;
+  }
+  50%{
+    width: 100%;
+  }
+}
+
+.main
+{
+    width: 100%;
+    height: 40vh;
+    padding: 7vw 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 100%;
+    height:100%;
+    display: flex;   
+    gap: 5vw;
+}
+
+.box1
+{
+    width: 50%;
+    height: 100%;
+    font-family: Vt;
+}
+.box1 h3{
+    font-size: 1.9vw;
+}
+#two{
+    width: 50%;
+}
+#two h1{
+    font-family: Tektur;
+    font-size:2vw ;
+}
+#two .border{
+    font-size: 2vw;
+    font-weight: 900;
+    -webkit-text-stroke:2px black;
+    color: transparent;
+}
+
+.showcase
+{
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: darkorange; */
+    font-family: gilroy;
+    display: flex;
+    flex-direction: column;
+}
+.items{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.items .whole{
+    width: 80vh;
+    height: 80vh;
+    
+}
+.item-img{
+    width: 80%;
+    height: 90%;
+    overflow: hidden;
+    position: relative;
+
+}
+.item-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* overflow: hidden; */
+    transition: all ease 1s;
+
+}
+.item-img:hover img{
+    scale: 1.2;
+    filter: grayscale(2);
+    /* filter: contrast(2); */
+}
+.whole h3{
+   font-size: 1.4vw;
+  color: gray;
+   font-weight: 500;
+}
+.please{
+  width: 100%;
+    height: 100%;
+    /* background-color: rgba(255, 0, 0, 0.349); */
+    position: absolute;
+    z-index: 11;
+}
+#content{
+    width: 98vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#content .sometext h1{
+    font-size: 12vw;
+    font-family:"Tektur" ;
+    transition: all ease 0.5s;
+    line-height: 1.1;
+    position: absolute;
+    top: 11%;
+    /* transform: translate(-50%,-50%); */
+}
+.sometext h1:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px black;
+}
+.sometext h1:nth-child(2){
+    color: black;
+    animation: anim 3s ease-in-out infinite;
+}
+@keyframes anim{
+    0%,100%{
+        clip-path: polygon(50% 0%, 100% 0, 100% 51%, 0 51%, 0 0);
+        
+        
+    }
+    50%{
+        clip-path: polygon(63% 43%, 100% 43%, 100% 100%, 0 100%, 0 42%);
+    }
+}
+
+#content .shoes{
+    width: 8vw;
+    height: 10vw;
+    /* background-color: aqua; */
+    position: absolute;
+    left: 80%;
+    transform: translateX(-50%);
+    top: 68%;
+}
+.shoes img{
+    width: 100%;
+    height: 100%;
+}
+.cursor{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 5px;
+}
+
+
+@media (max-width: 599px) {
+  .firstcontiner {
+    gap: 0px;
+  }
+.firstcontiner .upshoes ,.firstcontiner .downshoes{   
+   height: 60vh;
+   width: 100%;
+   overflow: hidden;
+   align-items: end;
+   
+
+   }
+   .firstcontiner .upshoes  #firstloaderimg , .firstcontiner .downshoes  #secondloderimg{
+    width: 50vh !important;
+    height: 60vh !important;
+    position: absolute;
+    top: 5% !important;
+   }
+   .firstcontiner .upshoes .shaod {
+    bottom: 0px;
+    width: 15%;
+    border-radius: 100%;
+    left: 18%;
+   }
+   .firstcontiner .downshoes .shaod {
+    bottom: 0px;
+    width: 15%;
+    border-radius: 100%;
+    left: 18%;
+   }
+   .svgcontiner .svg , .svgcontiner .svg1{
+   height: 40vw !important;
+   width: 40vw !important;
+   } 
+ 
+   .mainpageloader{
+     height: 100vh !important;
+   } 
+.mainpageloader  .logo{
+  height:30vh ;
+  width: 50vh;
+}
+.mainpageloader  .logo img{
+  height: 100%;
+  width: 100%;
+}
+
+   .loader #text{
+    width: 100%;
+   }  
+   #text h1{
+    font-size:15vh;
+   }
+  .shoesright{
+    height: 40vh;
+    width: 30vh;
+    right:0% ;
+
+  }
+  .shoesright img{
+    height: 100%;
+    width: 100%;
+  }
+  .shoesright .shaod{
+    bottom: 25%;
+    left: 18px;
+  }
+  .shoesleft{
+    height: 40vh;
+    width: 30vh;
+    left:0% ;
+
+  }
+  .shoesleft img{
+    height: 100%;
+    width: 100%;
+  }
+  .shoesleft .shaod{
+    bottom: 25%;
+    right: 18px;
+  }
+ 
+  .homepage .imagecontinaer .maincard .imgright ,.homepage .imagecontinaer .incomingcard .imgright{
+    left: -110%;
+    height: 50vh;
+    width: 50vh;
+  }
+  .homepage .imagecontinaer .maincard .imgleft ,.homepage .imagecontinaer .incomingcard .imgleft{
+    height: 50vh;
+    width: 50vh;
+    left: 120%;
+  }
+  .homepage .imagecontinaer .maincard .imgright img , .homepage .imagecontinaer .incomingcard .imgright img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+  }
+  .homepage .imagecontinaer .maincard .imgleft img , .homepage .imagecontinaer .incomingcard .imgleft img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+   }
+   .overlay{
+    overflow: hidden !important;
+   } 
+  .navbar{
+    padding: 15px 20px;
+  }
+  
+  .navbar .logo #SVG{
+    height: 7vh;
+    width: 7vh;
+    position: absolute; 
+  }
+  .navbar   .menu{
+    margin-right: 10px !important;
+  }
+  .menu{
+   font-size: 4vw !important; 
+   }
+
+  .menubar .face{
+    display: none;
+  }
+  .menubar #menubarlogo .SVG{
+    height: 6vh;
+    width: 6vh;
+  }
+  .menubar #menubarlogo .menu i{
+    font-size: 3vh;
+  }
+  .menubarcontant .up {
+    flex-direction: column;
+  }
+  .up .menuelement {
+    height:30vh !important;
+    width: 30vh !important;
+    z-index:999;
+    top: 45%;
+  } 
+  
+  .up .menuitemsleft{
+    width: 100%;
+    justify-content: start;
+  } 
+  .menu-items {
+    font-size: 4vh;
+  }
+  .up .menuitemsright{
+    width: 100%;
+    justify-content: end;
+    line-height: 25px;
+  } 
+  .down .h1
+  {
+    font-size: 2vh;
+  }
+   .overlay{
+    overflow: hidden;
+   }
+   .overlay .details #element1{
+    height: 20vh !important;
+    top: 60% !important;
+
+   }
+   .overlay .details #element2{
+    height: 15vh !important;
+    justify-content: end !important;
+    
+
+
+   }
+  
+   .overlay .details #element3{
+    height: 20vh !important;
+    top: 58% !important;
+
+   }
+   .overlay .details .detail1 #orginal {
+    font-size: 10vw !important;
+
+  }
+  .overlay .details .detail1 h1 {
+    font-size: 7vw !important;
+  }
+  .overlay .details .detail2 #color {
+    font-size: 10vw !important;
+
+  }
+  .overlay .details .detail2 h1 {
+    font-size: 5vw !important;
+  }
+  
+  
+  .overlay .details .detail3 #shouename {
+    font-size: 15vw !important;
+
+  }
+  .overlay .details  #moral {
+    font-size: 10vw !important;
+    width: 60% !important;
+    align-items: center !important;
+    line-height: 10vw !important;
+  }
+
+   .overlay .details .detail4 #Collaction {
+     font-size: 10vw !important;
+
+   }
+   .overlay .details .detail4 h1 {
+    font-size: 7vw !important;
+
+  }
+  .overlay .details .detail5 #location {
+    font-size: 10vw !important;
+
+  }
+  .overlay .details .detail5 h1 {
+   font-size: 5vw !important;
+
+  }
+
+  /* homepage end  /////////////////////////////////// */
+
+  /* secondepage */
+
+  .history{
+    margin-top: 20px !important;
+  }
+  .history .scrolling .scrolllogo {
+    margin: 10px 0px !important;
+  }
+  .history .scrolling .scrolllogo  h1{
+    font-size: 5vw !important;
+  }
+  .history .scrolling .scrolllogo  img{
+   height: 10vw !important;
+   width: 10vw !important;
+
+  }
+  .history .scrolling .scrolllogo  .secondlogoimg{
+    height: 15vw !important;
+    width: 15vw !important;
+ 
+   }
+   .history .jordanblocks{
+    height: 100%;
+    width: 100%;
+     justify-content: start !important;
+     flex-direction: column !important;
+   }
+   .history .jordanblocks .left{
+      height: 50vh !important;
+      width: 100% !important;
+      align-items: center !important;
+      justify-content: start !important;
+   }
+   .history .jordanblocks .left .jordanimg{
+    height: 80% !important;
+    width: 50% !important;
+    margin-left: 5vw !important;
+    margin-top: 5vw !important;
+    border-radius: 5px;
+
+   }
+   .history .jordanblocks .left .jordanimg img{
+    height: 100% !important;
+    width: 150% !important;
+    object-fit: cover;
+   }
+   .history .jordanblocks .left .jordanfisrtshoe{
+    height: 15vh;
+    width: 40vw;
+   }
+   #jordantext{
+    font-size: 2.7vw;
+   }
+   #Collectoin{
+    top: 30%;
+    font-size: 2.8vw;
+    right: -40%;
+   }
+   .perajordanfisrtshoe{
+    height:50%;
+    width: 40vw;
+    right: 10px;
+    top: 40%;
+   }
+   .perajordanfisrtshoe p{
+    font-size:2.8vw ;
+    margin-top: 10px;
+    padding-left: 10px;
+    color: #333 !important;
+   }
+   .history .jordanblocks .right{
+    height: 50vh !important;
+    width: 100% !important;
+    align-items: center !important;
+    justify-content: start !important;
+    position: relative;
+   }
+   .firstlogojordan{
+    height: 40vw !important;
+    width: 60vw !important;
+    top: 50%;
+    left: 20%;
+
+   }
+   #jordan3{
+    height: 28vw !important;
+    width: 50vw !important;
+    top: 30%;
+    left: 25%;
+
+   }
+   #jordan3shoepera{
+    top: 100%;
+    width: 70%;
+    left: 50%;
+    transform: translate(-50% , -50%) !important;
+   }
+   #jordan3shoepera p{
+    font-size: 2.4vw;
+    text-align: center;
+    line-height: 10px;
+   }
+   
+ 
+
+
+
+  .All-Collaction{
+    margin-top: 20vw;
+  }
+  #All-Collaction{
+   font-size: 8vw;
+  }
+  .productContainer{
+    width: 100%;
+    height: 100vh;
+    margin-left: auto;
+}
+.slide{
+    width: 100%;
+    height: 100%;
+    background: #304b5b !important;
+}
+.bg-light{
+    background:rgb(39, 38, 38) !important;
+    top: 0;
+    width: 100% !important;
+    height: 30%;
+}
+.bg-dark{
+    background: #fff !important;
+    top: 30%;
+    height: 70%;
+    width: 100%;
+}
+
+.slider .shoeimg{
+    top: 30%;
+    width: 80%;
+    height: 55%;
+}
+.slider .shoeimg img{
+    height: 100%;
+    width: 100%;
+}
+
+.slider .heading-light{
+    font-size: 50px;
+    margin-top:20px ;
+}
+
+.slider .heading-dark{
+    font-size: 80px;
+    margin-top: 90px;
+}
+.slider .wave{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    z-index: -1;
+
+}
+
+.slider .wave img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slider .title{
+    font-size: 20px;
+    font-family: "Dela Gothic One", sans-serif;
+    color: #222;
+}
+.slider .price{
+    text-align: center;
+    font-size: 20px;
+    font-family: "Dela Gothic One", sans-serif;
+    color: #333;
+}
+
+.slider button{
+  display: block;
+  margin-top: 10px;
+  padding: 5px 20px;
+  font-family: "Dela Gothic One", sans-serif;
+  background-color: #fff;
+  outline: none;
+  font-size: 10px;
+  border-radius: 3px;
+  border: 2px solid#b2c2cc;
+  cursor: pointer;
+  color: #222;
+}
+.specs{
+    position: absolute;
+    top: 50% !important;
+    left: 0%;
+    transform: translateY(50%);
+    width: 39% !important;
+    height: 35% !important;
+    z-index:-1;
+    color: #fff;
+    background-color: #fff;
+    padding-left: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+
+}
+.spec {
+ width: 30vw !important;
+ height: 5vh !important;
+}
+.spec p{
+    font-weight: 500;
+    font-size: 15px;
+    color: #222;
+    /* background-color: #2196f3; */
+    text-shadow: -1px 1px 3px rgba(0,0,0,0.3);
+    line-height: 10px;
+}
+.spec span{
+    font-size: 10px;
+    opacity: 0.5;
+    color: #444;
+    text-transform: uppercase;
+
+}
+   
+.spec::before{
+    content: "SPECS";
+    position: absolute;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    top: -5%;
+    left: 2%;
+    font-size: 12px;
+    font-family: "Dela Gothic One", sans-serif;
+    color: #222;
+    text-shadow: -1px 1px 3px rgba(0,0,0,0.3);
+}
+.thumb1 {
+    display: none !important;
+}
+.thumb2 .swiper-slide-active{
+  display: none !important;
+}
+.thumb2 .swiper-slide-active:last-child{
+  display: grid!important;
+}
+.thumb2{
+    /* display: none; */
+    position: absolute;
+    bottom: 100px !important;
+    right:10px;
+    height: 20%;
+    width: 55%;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    background: #2196f3;
+}
+.thumb2 .swiper-slide{
+    overflow: hidden;
+}
+.thumb2 .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100% !important;
+    width: 80% !important;
+    position: absolute;
+    left: -30%;
+}
+.thumb2 .img img{
+    height:100%;
+    width: 100%;
+    object-fit: contain;
+}
+.thumb2 .title{
+    position: absolute;
+    top:0%;
+    left: 5px;
+    height: 40%;
+    width: 100%;
+}
+
+.thumb2 .title span{
+    font-size: 10px !important;
+    font-family: "Dela Gothic One", sans-serif;
+}
+
+.thumb2 .title p{
+    font-size: 13px !important;
+    font-family: "Dela Gothic", sans-serif;
+    
+}
+.thumb2 .title p:nth-child(3){
+    font-size: 13px !important;
+    position: absolute;
+    top: 25px;
+    right:110px;
+}
+.thumb2 .icon{
+    font-size: 15px;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    z-index: 10;
+    color: black;
+}
+#shopnow{
+  height: 30vh !important;
+} 
+#shopnow .distext{
+  font-size: 6vw;
+}
+#shopnow .dictime{
+  font-size: 3vw;
+}
+.shopnow{
+  font: 1.4vw ;
+}
+
+/* thirdpage */
+ 
+.thirdpage{
+  height:100vh !important ;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.videoshowcontiner{
+  height: 50% !important;
+  width: 80% !important;
+ 
+}
+.videosection{
+  height: 8vh !important;
+}
+.videosection h1{
+  font-size: 3vw;
+}
+.videoconatiners{
+  height: 30vh !important;
+  width: 50vh !important;
+  top: 70% !important;
+
+}
+
+
+
+#content .sometext h1{
+    font-size: 20vw;
+    font-family:"Tektur" ;
+    transition: all ease 0.5s;
+    line-height: 1.1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%,-50%);
+}
+.main
+{
+    width: 100%;
+    height: 80vh;
+    /* background-color: crimson; */
+    padding: 7vw 0;
+}
+.box{
+    width: 100%;
+    height: 50vh;
+    
+    /* background-color: yellow; */
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 1vw 3vw;
+    gap: 20vw;
+}
+
+.box1
+{
+    width: 50vh;
+    height: 100%;
+    /* background-color: aqua; */
+    font-family: Vt;
+    /* font-size: 20px; */
+}
+.box1 h3{
+    font-size: 1.9vw;
+}
+#two{
+    width: 88vh;
+}
+#two h1{
+    font-family: Tektur;
+    font-size:4vw ;
+}
+#two .border{
+    font-size: 4vw;
+    font-weight: 900;
+    -webkit-text-stroke:2px black;
+    color: transparent;
+}
+/* .item{
+    width: 40%;
+    margin-bottom: 4em;
+} */
+.showcase
+{
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: darkorange; */
+    font-family: gilroy;
+    }
+.items{
+    width: 100%;
+    height: 86vh;
+    /* background-color: darkgreen; */
+    display: flex;
+    padding: 0 3vw;
+    justify-content: space-between;
+}
+.items .whole{
+    width: 70vh;
+    height: 100%;
+    background-color: gold;
+}
+.item-img{
+    width: 70vh;
+    height: 82vh;
+    /* background-color: gold; */
+    overflow: hidden;
+    position: relative;
+
+}
+.item-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* overflow: hidden; */
+    transition: all ease 1s;
+
+}
+.item-img:hover img{
+    scale: 1.2;
+    filter: grayscale(2);
+    /* filter: contrast(2); */
+}
+.whole h3{
+   font-size: 1.4vw;
+  color: gray;
+   font-weight: 500;
+}
+#content .shoes{
+ display: none;
+}
+
+.lines{
+  display: none;
+}
+/* fotter   ///// */
+.fotterelement {
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+.fotterlink .up , .down{
+  font-size: 2.5vw;
+}
+.fotterelement2{
+  flex-direction: column;
+  height: 50vh;
+  gap: 0;
+}
+.footerleft{
+  width: 100% !important;
+  height: 50%!important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerleft .shoesroted{
+  height: 100% !important;
+  width: 60% !important;
+}
+.footerleft .shoesroted img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.footerleft .textyear{
+  height: 100%;
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.textyear .senk{
+  font-size:7vw;
+  line-height: 100%;
+  font-weight: 700;
+ 
+}
+.textyear .of {
+  font-size:5vw;
+  line-height: 100%;
+  padding-right: 50px;
+  font-weight: 500;
+ 
+}
+.textyear .the {
+  font-size:5vw;
+  line-height: 100%;
+  padding-right: 20px;
+  font-weight: 500;
+
+ 
+}
+.shownowbtn{
+  padding: 7px 0px;
+  font-size: 2vw;
+  width: 25%;
+  margin-left: 0px;
+  justify-content: center;
+  align-items: center;
+}
+.fotterright{
+  width: 100%;
+  height: 50%;
+  justify-content: center;
+}
+.fotterright img{
+  height: 40vh !important;
+  position: absolute;
+}
+#just{
+  left: -12% !important;
+  font-size: 4vh;
+}
+#dropped{
+  left: -10% !important ;
+  font-size: 4vh;
+}
+#available{
+  left: -10% !important;
+  bottom: 0;
+}
+#available p{
+ font-size: 1.5vh;
+}
+.blinkline{
+  right:8%;
+  bottom: 30%;
+  width: 20%;
+}
+.fotterelemen3{
+  height: 5vh;
+}
+.fotterelemen3 h1{
+  font-size: 2vh;
+}
+.fotterelemen3 p{
+  font-size: 1.5vh;
+}
+
+
+.fotterelement4{
+  height: 7vh;
+
+}
+.fotterelement4 .fottersociallink1{
+  width: 60%;
+}
+
+.fotterlogo img{
+  height: 15px;
+  top: 0;
+}
+.fotterlogo h1
+{
+  font-size: 6px;
+  padding-left: 15px;
+}
+.fotterlogo .address{
+  padding-left: 25px;
+}
+.fotterelement4 .fottersociallink2{
+  width: 30%;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+
+}
+
+  
